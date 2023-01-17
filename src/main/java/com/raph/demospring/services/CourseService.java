@@ -8,10 +8,14 @@ import com.raph.demospring.repo.acadRepo.CourseRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Service
 public class CourseService {
+
+    Logger logger = Logger.getLogger(CourseService.class.getName());
 
     @Autowired
     CourseRepo courseRepo;
@@ -27,6 +31,7 @@ public class CourseService {
         course.setCourse_name(courseRequest.coursename);
         course.setCourseContents(courseRequest.courseContents.stream()
                 .map(courseContent -> {
+                    logger.log(Level.INFO, "course"+courseContent);
                     CourseContent courseContent1 = courseContent;
                     if(courseContent1.getId() > 0){
                         courseContent1 = courseContentRepo.findById(courseContent1.getId());
