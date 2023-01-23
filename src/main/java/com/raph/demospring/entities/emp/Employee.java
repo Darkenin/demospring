@@ -11,10 +11,10 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "employee_id")
-    private int employee_id;
-    private String employee_name;
+    private int id;
+    private String employeename;
     private String department;
-    private Date joiningDate;
+    private Date joiningdate;
     private int age;
     private String address;
     private float salary;
@@ -25,19 +25,19 @@ public class Employee {
     }
 
     public int getEmployee_id() {
-        return employee_id;
+        return id;
     }
 
     public void setEmployee_id(int employee_id) {
-        this.employee_id = employee_id;
+        this.id = employee_id;
     }
 
-    public String getEmployee_name() {
-        return employee_name;
+    public String getEmployeename() {
+        return employeename;
     }
 
-    public void setEmployee_name(String employee_name) {
-        this.employee_name = employee_name;
+    public void setEmployeename(String employeename) {
+        this.employeename = employeename;
     }
 
     public String getDepartment() {
@@ -48,12 +48,12 @@ public class Employee {
         this.department = department;
     }
 
-    public Date getJoiningDate() {
-        return joiningDate;
+    public Date getJoiningdate() {
+        return joiningdate;
     }
 
-    public void setJoiningDate(Date joiningDate) {
-        this.joiningDate = joiningDate;
+    public void setJoiningdate(Date joiningdate) {
+        this.joiningdate = joiningdate;
     }
 
     public int getAge() {

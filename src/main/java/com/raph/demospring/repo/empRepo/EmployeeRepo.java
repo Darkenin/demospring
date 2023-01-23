@@ -9,5 +9,8 @@ import java.util.List;
 @Repository
 public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
     Employee findById(int id);
-    List<Employee> findByEmployeeName(String employee_name);
+    List<Employee> findByEmployeename(String employee_name);
+
+   List<Employee> findByDepartmentAndAgeLessThan(String department, int age);
+    List<Employee> findByEmployeenameStartingWith(String employeename);
 }

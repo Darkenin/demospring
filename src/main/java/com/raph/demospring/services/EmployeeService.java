@@ -24,15 +24,15 @@ public class EmployeeService {
         return employeeRepo.findAll();
     }
 
-    public List<Employee> findAllEmployeeByIds(List<Integer> ids){
+    public List<Employee>   findAllEmployeeByIds(List<Integer> ids){
         return employeeRepo.findAllById(ids);
     }
 
-    public Employee findEmployeeById(int id){
+    public Employee findByEmployeeid(int id){
         return employeeRepo.findById(id);
     }
-    public List<Employee> findEmployeeByName(String name){
-        return employeeRepo.findByEmployeeName(name);
+    public List<Employee> findByEmployeename(String name){
+        return employeeRepo.findByEmployeename(name);
     }
 
 }
